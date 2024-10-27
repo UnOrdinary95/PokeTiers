@@ -1,0 +1,182 @@
+<!--Ceci est un commentaire-->
+<!DOCTYPE html>
+<html>
+
+<head> <!--Information about the web page-->
+    <meta charset="UTF-8">
+    <!--Spécifie l'encodage des caractères utilisé dans la page web-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Garantit que la page s'affiche correctement sur les appareils mobiles-->
+    <title>PokéTiers - OverUsed Rankings</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" href="images/pokeball.png">
+</head>
+
+<body> <!--Visible content in your web page-->
+    <header>
+        <div id="header_container1">
+            <div class="inner_header_container1" id="ihc1_left">
+                <div>
+                    <a href="index.html">
+                        <img id="header_icon" src="images/pokeball.png" alt="Icone PokéTiers">
+                    </a>
+                </div>
+
+                <div>
+                    <a href="index.html">
+                        <h1 id="header_title1">PokéTiers</h1>
+                    </a>
+                </div>
+            </div>
+
+            <div class="inner_header_container1" id="ihc1_right">
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="tier_list.html">Tier List</a></li>
+                            <li><a href="equipes.html">Équipes</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div>
+                    <a href="https://play.pokemonshowdown.com/">
+                        <button class="button_shape" id="header_button_play">Jouer</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="header_container2">
+            <div class="inner_header_container2">
+                <h1 id="header_title2">Classement des Pokémon OverUsed (OU) - <span class="text_color">Génération 9</span></h1>
+                <p>Découvrez le classement complet des meilleurs Pokémon du tier 9G OU.</p> 
+                <p>Consultez les rôles et forces de chaque Pokémon pour optimiser votre équipe en un clin d'œil.</p>
+                <a href="tier_list.html">
+                    <button class="button_shape">Découvrir</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="three_sections_flexbox">
+            <section id="section1"> <!--C'est quoi pokemon showdown-->
+                <div id="section_container1">
+                    <div>
+                        <h2 class="h2_format">Qu'est-ce que Pokémon Showdown ?</h2>
+                    </div>
+
+                    <div>
+                        <p class="p_format">Pokémon Showdown est un simulateur de combats Pokémon en ligne, utilisée par les joueurs du monde entier.</p>
+                        <p class="p_format">Totalement gratuit, il permet de combattre en temps réel dans différents tiers, dont le très populaire tier <span class="text_color">OverUsed (OU).</span></p>
+                        <p class="p_format">C'est un alternatif au jeu sur console, connu pour être lent et chronophage. Un incontournable pour les dresseurs compétitifs !</p>
+                    </div>
+
+                    <div>
+                        <img id="isc1_sprite" src="images/red-sprite.png" alt="Sprite Red Gen 1">
+                        <img id="isc1_screenshot" src="images/Screenshot.png" alt="Screenshot Pokemon Showdown">
+                    </div>
+                    
+                    <div>
+                        <a href="https://play.pokemonshowdown.com/">
+                            <button class="button_shape" id="button_play_now">Jouer Maintenant !</button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <div id="right_flexbox">
+                <section class="section2_3"> <!--Le but d'une équipe pokemon-->
+                    <div class="section_container2_3">
+                        <div>
+                            <h2 class="h2_format">La Composition d'une Équipe</h2>
+                        </div>
+
+                        <div>
+                            <p class="p_format">Une équipe se compose de 6 Pokémon, qu'ils soient défensifs ou offensifs, et l'objectif est de mettre KO les 6 Pokémon adverses.</p>
+                            <p class="p_format">Pour y parvenir, il est essentiel que ces 6 Pokémon travaillent en synergie, 
+                                affaiblissant les Pokémon défensifs de l'adversaire pour permettre au <span class="text_color">'sweeper'</span> (balayeur, Pokemon se chargeant de finir la partie) 
+                                de balayer le terrain en éliminant les Pokémon restants.</p>
+                            <p class="p_format">C'est l'une des nombreuses stratégies possibles pour remporter la partie !</p>
+                        </div>
+
+                        <div>
+                            <img id="isc2_pikachu" src="images/pikachu.png" alt="image Pikachu">                       
+                        </div>
+
+                        <div>
+                            <video id="isc2_video" autoplay controls muted>
+                                <source src="videos/sweep.mp4" type="video/mp4">
+                            </video> 
+                        </div>
+
+                        <div>
+                            <a href="equipes.html">
+                                <button class="button_shape" id="button_teams">Voir des exemples d'équipes stratégiques</button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section2_3"> <!--C'est quoi les générations-->
+                    <div class="section_container2_3">
+                        <div>
+                            <h2 class="h2_format">Les Générations de Pokémon</h2>
+                        </div>
+
+                        <div>
+                            <p class="p_format">Les générations de Pokémon représentent les différentes phases de l'évolution du jeu depuis ses débuts en 1996.</p>
+                            <p class="p_format">Chaque génération introduit de nouveaux Pokémon, régions, mécaniques de jeu et règles compétitives.</p>
+                            <p class="p_format">Aujourd'hui, nous en sommes à la <span class="text_color">neuvième génération (9G)</span></p>
+                        </div>
+
+                        <div>
+                            <img id="isc3_img_gen" src="images/gen.jpg" alt="Image Génération Pokemon">                      
+                        </div>
+
+                        <div class="inner_section_container3">
+                            <a href="https://www.pokepedia.fr/G%C3%A9n%C3%A9ration">
+                                <button class="button_shape" id="button_gen">En savoir plus</button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section id="section4"> <!--C'est quoi les tiers-->
+            <div id="section_container4">
+                <div id="inner_section_container4-1">
+                    <div>
+                        <h2 class="h2_format">Les Tiers de Pokémon Showdown</h2>
+                    </div>
+
+                    <div>
+                        <p class="p_format">Sur Pokémon Showdown, les Pokémon sont classés en 'tiers' en fonction de leur taux de jouabilité (leurs usages) dans les combats compétitifs.</p> 
+                        <p class="p_format">Le tier OverUsed (OU) regroupe les Pokémon les plus utilisés en raison de leur polyvalence et de leur efficacité.</p>
+                        <p class="p_format">Au-dessus de l'OU, le tier <span class="text_color">Uber</span> est réservé aux Pokémon trop puissants et dominants pour un jeu équilibré dans les autres catégories.</p>
+                    </div>
+
+                    <div>
+                        <img id="pyramid" src="images/tiers-pyramid.png" alt="Tiers Smogon Pyramid">
+                    </div>
+
+                    <div>
+                        <a href="https://www.pokepedia.fr/Tier_strat%C3%A9gique">
+                            <button class="button_shape" id="button_tiers">En savoir plus</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section> <!--Le pokemon plus utilisé en OU9G-->
+
+        </section>
+    
+    </main>
+
+</body>
+
+</html>

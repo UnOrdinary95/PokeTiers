@@ -1,0 +1,300 @@
+/*Global*/
+@font-face{
+    src: url(../fonts/Jersay10.ttf);
+    font-family: Jersay10;
+}
+
+@font-face{
+    src: url(../fonts/HindSiliguri.ttf);
+    font-family: Hind;
+}
+
+@font-face{
+    src: url(../fonts/Poppins-Bold.ttf);
+    font-family: Poppins;
+}
+
+body{
+    margin: 0px;
+    background-color: black;
+    color: white;
+    font-family: Hind, Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-family: Poppins;
+}
+
+h2{
+    font-family: Poppins;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.h2_format{
+    margin-top: 2vh;
+    margin-left: 1.5vw;
+}
+
+.p_format{
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.text_color{
+    color: rgba(255,0,0,1);
+}
+
+.button_shape{
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(255,0,0,1);
+}
+
+.button_shape:hover{
+    background-color: rgba(255,0,0,0.7);
+}
+
+
+
+/*Header*/
+#header_container1{
+    display: flex;
+    justify-content: space-between;
+    height: 7vh;
+    /* border: 2px solid white; */
+}
+
+.inner_header_container1{    /* inner_header_container1 == ihc1*/
+    display: flex;
+}
+
+#ihc1_left{
+    margin-left: 50px;
+}
+
+#ihc1_right{
+    margin-right: 50px;
+}
+
+#header_icon{
+    margin-top: 6px;
+    height: 50px;
+}
+
+#header_title1{
+    font-family: Jersay10, Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-top: 6px;
+    margin-left: 2px;
+}
+
+nav{
+    margin-top: 8px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    float: left;
+    margin-right: 70px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color:red;
+    text-decoration: underline;
+}
+
+#header_button_play{
+    margin-top: 15px;
+}
+
+#header_container2{
+    height: 80vh;
+    /* border: 2px solid white; */
+    position: relative; /* Nécessaire pour positionner ::before par rapport à ce conteneur */
+    display: flex;
+    justify-content: center; /*Centre horizontalement*/
+    align-items: end; /* Centre verticalement */
+    text-align: center;
+}
+
+#header_container2::before{
+    content: ""; /* Nécessaire pour que le pseudo-élément soit affiché */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*Etend pour qu'il couvre l'espace*/
+    background-image: url(../images/background2.gif);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1; /* Mettre le pseudo-élément derrière le contenu (niveau de superposition -1)*/
+}
+
+.inner_header_container2{
+    margin-bottom: 80px;
+}
+
+#header_title2{
+    font-size: 50px;
+}
+
+.inner_header_container2 p{
+    font-size: 20px;
+}
+
+
+
+/*Main => 5 Sections*/
+#three_sections_flexbox{
+    display: flex;
+    /* border: 1px solid white; */
+}
+
+#section1{
+    position: relative; /*Nécessaire pour pouvoir utiliser position: absolute (On veut se baser sur ça)*/
+    height: 100vh;
+    width: 40vw;
+    /* border: 1px solid white; */
+}
+
+#section_container1{
+    height: 90vh;
+    width: 32vw;
+    margin-top: 5vh;
+    margin-left: 5vw;    
+    background-color: #1c1d1f;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+}
+
+#isc1_sprite{   /*isc = inner_section_container1*/
+    position: absolute;
+    height: 30vh;
+    width: 10vw;
+    left: 1vw;
+    bottom: 15vh;
+}
+
+#isc1_screenshot{
+    position: absolute;
+    border-radius: 20px;
+    border: 3px solid white;
+    height: 35vh;
+    width: 25vw;
+    right: 1vw;
+}
+
+#button_play_now{
+    margin-left: 16vw;
+    margin-top: 70%;
+}
+
+#right_flexbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.section2_3{
+    position: relative;
+    height: 50vh;
+    width: 60vw;
+    /* border: 1px solid white; */
+}
+
+.section_container2_3{
+    height: 40vh;
+    width: 50vw;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    background-color: #1c1d1f;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+}
+
+#isc2_pikachu{ /* inner_section_container2*/ 
+    position: absolute;
+    height: 20vh;
+    left: 1vw;
+    bottom: 0vh;
+}
+
+#isc2_video{
+    position: absolute;
+    border-radius: 20px;
+    border: 3px solid white;
+    height: 20vh;
+    right: 1vw;
+    bottom: 0vh;
+}
+
+#button_teams{
+    margin-left: 10vw;
+}
+
+#isc3_img_gen{ /* inner_section_container3*/
+    position: absolute;
+    border-radius: 20px;
+    border: 3px solid white;
+    height: 22vh;
+    width: 22vw;
+    bottom: 1vh;
+    right: 1vw;
+}
+
+#button_gen{
+    margin-left: 10vw;
+    margin-top: 1vh;
+}
+
+#section4{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid white; */
+}
+
+#section_container4{
+    height: 70vh;
+    width: 80vw;    
+    background-color: #1c1d1f;
+    border-radius: 20px;
+    display: flex;
+    /* border: 1px solid white; */
+}
+
+#inner_section_container4-1{
+    position: relative;
+    /* border: 1px solid white; */
+    width: 40%;
+}
+
+#pyramid{
+    height: 30vh;
+    position: absolute;
+    bottom: 3%;
+    left: 1%;
+}
+
+#button_tiers{
+    margin-left: 20vw;
+    margin-top: 20vh;
+}
