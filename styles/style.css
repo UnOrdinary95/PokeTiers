@@ -273,25 +273,28 @@ nav a:hover{
     /* border: 1px solid white; */
 }
 
-#section_container4-1{
+#section_container4{
     height: 70vh;
     width: 80vw;    
     background-color: #1c1d1f;
     border-radius: 20px;
     display: flex;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 
-#inner_section_container4-1-1{
+#left-inner_section_container4{
     position: relative;
     /* border: 1px solid white; */
     width: 40%;
 }
 
-#inner_section_container4-1-2{
+#right-inner_section_container4{
     width: 60%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #pyramid{
@@ -305,3 +308,27 @@ nav a:hover{
     margin-left: 20vw;
     margin-top: 20vh;
 }
+
+.r-isc4_box{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon_20vh{
+    height: 20vh;
+}
+
+#mewtwo{
+    margin-left: 5vw;
+}
+
+#aquali{
+    height: 14vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
