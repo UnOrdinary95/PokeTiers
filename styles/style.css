@@ -267,24 +267,31 @@ nav a:hover{
 
 #section4{
     margin-top: 5vh;
+    margin-bottom: 5vh;
     display: flex;
     justify-content: center;
     /* border: 1px solid white; */
 }
 
-#section_container4{
+#section_container4-1{
     height: 70vh;
     width: 80vw;    
     background-color: #1c1d1f;
     border-radius: 20px;
     display: flex;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
-#inner_section_container4-1{
+
+#inner_section_container4-1-1{
     position: relative;
     /* border: 1px solid white; */
     width: 40%;
+}
+
+#inner_section_container4-1-2{
+    width: 60%;
+    border: 1px solid white;
 }
 
 #pyramid{
