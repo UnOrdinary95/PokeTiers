@@ -332,3 +332,9 @@ nav a:hover{
     padding-bottom: 3vh;
 }
 
+#footer{
+    margin-top: 10vh;
+    height: 40vh;
+    border: 1px solid white;
+}
+
