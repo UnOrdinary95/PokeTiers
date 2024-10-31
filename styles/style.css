@@ -84,18 +84,23 @@ a{
     margin-right: 50px;
 }
 
-#header_icon{
-    margin-top: 6px;
+.pokeball{
     height: 50px;
 }
 
-#header_title1{
+#header_icon{
+    margin-top: 6px;
+}
+
+.title{
     font-family: Jersay10, Arial, Helvetica, sans-serif;
     font-size: 50px;
+}
+
+#header_title1{
     margin-top: 6px;
     margin-left: 2px;
 }
-
 nav{
     margin-top: 8px;
 }
@@ -338,3 +343,39 @@ nav a:hover{
     border: 1px solid white;
 }
 
+#footer_container{
+    position: relative;
+    overflow: hidden;
+    width: 30vw;
+    height: 40vh;
+    border: 1px solid white;
+}
+
+.pokeball_gray{
+    position: absolute;
+    height: 75%;
+    z-index: -1;
+}
+
+#img_pokeball1{
+    left: -7vw;
+    bottom: -12vh;
+}
+
+#inner_footer_container1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer_icon{
+    height: 10vh;
+}
+
+#footer_title{
+    margin-top: 0%;
+    font-size: 60px;
+}
