@@ -338,16 +338,17 @@ nav a:hover{
 }
 
 #footer{
+    display: flex;
     margin-top: 10vh;
     height: 40vh;
     border: 1px solid white;
 }
 
-#footer_container{
+#footer_container1{
     position: relative;
     overflow: hidden;
     width: 30vw;
-    height: 40vh;
+    height: 100%;
     border: 1px solid white;
 }
 
@@ -378,4 +379,10 @@ nav a:hover{
 #footer_title{
     margin-top: 0%;
     font-size: 60px;
+}
+
+#footer_container2{
+    height: 80%;
+    width: 50%;
+    border: 1px solid white;
 }
