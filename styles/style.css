@@ -382,7 +382,33 @@ nav a:hover{
 }
 
 #footer_container2{
+    /* margin-left: 2vh; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     height: 80%;
     width: 50%;
     border: 1px solid white;
+    /* overflow: hidden; */
+}
+
+.footer_nav{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+
+.ul_flexbox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-content: center; */
+}
+
+.ul_flexbox li{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.test{
+    /* flex-wrap: wrap; */
 }
