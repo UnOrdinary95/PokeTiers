@@ -101,17 +101,12 @@ a{
     margin-top: 6px;
     margin-left: 2px;
 }
-nav{
-    margin-top: 8px;
-}
 
 nav ul{
     list-style-type: none;
 }
 
 nav li{
-    float: left;
-    margin-right: 70px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -119,6 +114,15 @@ nav li{
 nav a:hover{
     color:red;
     text-decoration: underline;
+}
+
+#header_nav{
+    margin-top: 8px;
+}
+
+#header_nav_li{
+    float: left;
+    margin-right: 70px;
 }
 
 #header_button_play{
@@ -347,7 +351,7 @@ nav a:hover{
 #footer_container1{
     position: relative;
     overflow: hidden;
-    width: 30vw;
+    width: 25%;
     height: 100%;
     border: 1px solid white;
 }
@@ -382,26 +386,18 @@ nav a:hover{
 }
 
 #footer_container2{
-    /* margin-left: 2vh; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     height: 80%;
     width: 50%;
     border: 1px solid white;
-    /* overflow: hidden; */
-}
-
-.footer_nav{
-    /* display: flex; */
-    /* flex-wrap: wrap; */
 }
 
 .ul_flexbox{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-content: center; */
+    margin-right: 2vw;
 }
 
 .ul_flexbox li{
@@ -409,6 +405,16 @@ nav a:hover{
     margin-bottom: 3vh;
 }
 
-.test{
-    /* flex-wrap: wrap; */
+#footer_container3{
+    position: relative;
+    overflow: hidden;
+    height: 80%;
+    width: 25%;
+    border: 1px solid white;
 }
+
+#img_pokeball2{
+    right: -7vw;
+    top: -11vh;
+}
+
