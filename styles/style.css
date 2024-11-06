@@ -1,4 +1,11 @@
 /*Global*/
+/*
+Couleur : 
+Rouge => rgb(255,0,0)
+Bleu => rgb(13,133,213)
+Vert =>
+Orange =>
+*/
 @font-face{
     src: url(../fonts/Jersay10.ttf);
     font-family: Jersay10;
@@ -45,7 +52,7 @@ a{
 }
 
 .text_color{
-    color: rgba(255,0,0,1);
+    color: rgb(13,133,213);
 }
 
 .button_shape{
@@ -55,11 +62,16 @@ a{
     padding: 10px 20px;
     cursor: pointer;
     color: white;
-    background-color: rgba(255,0,0,1);
+    background-color: rgba(13,133,213,1);
 }
 
 .button_shape:hover{
-    background-color: rgba(255,0,0,0.7);
+    background-color: rgba(13,133,213,0.7);
+}
+
+nav a:hover{
+    color: rgb(13,133,213);
+    text-decoration: underline;
 }
 
 
@@ -115,11 +127,6 @@ nav ul{
 nav li{
     font-size: 20px;
     font-weight: bold;
-}
-
-nav a:hover{
-    color:red;
-    text-decoration: underline;
 }
 
 #header_nav{
@@ -245,7 +252,7 @@ nav a:hover{
     /* border: 1px solid white; */
 }
 
-#isc2_pikachu{ /* inner_section_container2*/ 
+#isc2_pikachu{ /* inner_section_container2*/
     position: absolute;
     height: 20vh;
     left: 1vw;
@@ -447,3 +454,4 @@ nav a:hover{
     width: 50%;
     border: 1px solid white;
 }
+
