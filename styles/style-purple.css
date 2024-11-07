@@ -1,0 +1,508 @@
+/*Global*/
+/*
+Couleur : 
+Vert =>
+Orange =>
+*/
+@font-face{
+    src: url(../fonts/Jersay10.ttf);
+    font-family: Jersay10;
+}
+
+@font-face{
+    src: url(../fonts/HindSiliguri.ttf);
+    font-family: Hind;
+}
+
+@font-face{
+    src: url(../fonts/Poppins-Bold.ttf);
+    font-family: Poppins;
+}
+
+:root{  /* Variable CSS (Global Scope)*/
+    --red_color1: rgba(255,0,0,1);
+    --red_color07: rgba(255,0,0,0.7);
+
+    --blue_color1: rgba(13,133,213,1);
+    --blue_color07: rgba(13,133,213,0.7);
+
+    --yellow_color1: rgba(221, 185, 24, 1);
+    --yellow_color07: rgba(221, 185, 24, 0.7);
+
+    --purple_color1: rgba(120, 19, 203, 1);
+    --purple_color07: rgba(120, 19, 203, 0.7);
+}
+
+body{
+    margin: 0px;
+    background-color: black;
+    color: white;
+    font-family: Hind, Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-family: Poppins;
+}
+
+h2{
+    font-family: Poppins;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.h2_format{
+    margin-top: 2vh;
+    margin-left: 1.5vw;
+}
+
+.p_format{
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.text_color{
+    color: var(--purple_color1);
+}
+
+.button_shape{
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    background-color: var(--purple_color1);
+}
+
+.button_shape:hover{
+    background-color: var(--purple_color07);
+}
+
+nav a:hover{
+    color: var(--red_color1);
+    text-decoration: underline;
+}
+
+
+
+/*Header*/
+#header_container1{
+    display: flex;
+    justify-content: space-between;
+    height: 7vh;
+    /* border: 2px solid white; */
+}
+
+.inner_header_container1{    /* inner_header_container1 == ihc1*/
+    display: flex;
+}
+
+#ihc1_left{
+    margin-left: 50px;
+}
+
+#ihc1_right{
+    margin-right: 50px;
+}
+
+.pokeball{
+    height: 50px;
+}
+
+#header_icon{
+    margin-top: 6px;
+}
+
+.title{
+    font-family: Jersay10, Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+#header_title1{
+    margin-top: 6px;
+    margin-left: 2px;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+#header_ul{
+    margin-top: 17px;
+}
+
+nav li{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#header_nav{
+    margin-top: 8px;
+}
+
+#header_nav_li{
+    float: left;
+    margin-right: 70px;
+}
+
+#header_button_play{
+    margin-top: 15px;
+}
+
+#header_container2{
+    height: 80vh;
+    /* border: 2px solid white; */
+    position: relative; /* Nécessaire pour positionner ::before par rapport à ce conteneur */
+    display: flex;
+    justify-content: center; /*Centre horizontalement*/
+    align-items: end; /* Centre verticalement */
+    text-align: center;
+}
+
+#header_container2::before{
+    content: ""; /* Nécessaire pour que le pseudo-élément soit affiché */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*Etend pour qu'il couvre l'espace*/
+    background-image: url(../images/background2.gif);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1; /* Mettre le pseudo-élément derrière le contenu (niveau de superposition -1)*/
+}
+
+.inner_header_container2{
+    margin-bottom: 80px;
+}
+
+#header_title2{
+    font-size: 50px;
+}
+
+.inner_header_container2 p{
+    font-size: 20px;
+}
+
+
+
+/*Main => 5 Sections*/
+#three_sections_flexbox{
+    display: flex;
+    /* border: 1px solid white; */
+}
+
+#section1{
+    position: relative; /*Nécessaire pour pouvoir utiliser position: absolute (On veut se baser sur ça)*/
+    height: 100vh;
+    width: 40vw;
+    /* border: 1px solid white; */
+}
+
+#section_container1{
+    height: 90vh;
+    width: 32vw;
+    margin-top: 5vh;
+    margin-left: 5vw;    
+    background-color: #1c1d1f;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+}
+
+#isc1_sprite{   /*isc = inner_section_container1*/
+    position: absolute;
+    height: 30vh;
+    width: 10vw;
+    left: 1vw;
+    bottom: 15vh;
+}
+
+#isc1_screenshot{
+    position: absolute;
+    border-radius: 20px;
+    border: 3px solid white;
+    height: 35vh;
+    width: 25vw;
+    right: 1vw;
+}
+
+#button_play_now{
+    margin-left: 16vw;
+    margin-top: 70%;
+}
+
+#right_flexbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.section2_3{
+    position: relative;
+    height: 50vh;
+    width: 60vw;
+    /* border: 1px solid white; */
+}
+
+.section_container2_3{
+    height: 40vh;
+    width: 50vw;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    background-color: #1c1d1f;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+}
+
+#isc2_pikachu{ /* inner_section_container2*/
+    position: absolute;
+    height: 20vh;
+    left: 1vw;
+    bottom: 0vh;
+}
+
+#isc2_video{
+    position: absolute;
+    border-radius: 20px;
+    border: 3px solid white;
+    height: 20vh;
+    right: 1vw;
+    bottom: 0vh;
+}
+
+#button_teams{
+    margin-left: 10vw;
+}
+
+#isc3_img_gen{ /* inner_section_container3*/
+    position: absolute;
+    border-radius: 20px;
+    border: 3px solid white;
+    height: 22vh;
+    width: 22vw;
+    bottom: 1vh;
+    right: 1vw;
+}
+
+#button_gen{
+    margin-left: 10vw;
+    margin-top: 1vh;
+}
+
+#section4{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid white; */
+}
+
+#section_container4{
+    height: 70vh;
+    width: 80vw;    
+    background-color: #1c1d1f;
+    border-radius: 20px;
+    display: flex;
+    /* border: 1px solid white; */
+}
+
+
+#left-inner_section_container4{
+    position: relative;
+    /* border: 1px solid white; */
+    width: 40%;
+}
+
+#right-inner_section_container4{
+    width: 60%;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#pyramid{
+    height: 30vh;
+    position: absolute;
+    bottom: 3%;
+    left: 1%;
+}
+
+#button_tiers{
+    margin-left: 20vw;
+    margin-top: 20vh;
+}
+
+.r-isc4_box{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon_20vh{
+    height: 20vh;
+}
+
+#mewtwo{
+    margin-left: 5vw;
+}
+
+#aquali{
+    height: 14vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+#footer{
+    display: flex;
+    margin-top: 10vh;
+    height: 40vh;
+    border: 1px solid white;
+    /* flex-wrap: nowrap; */
+}
+
+#footer_container1{
+    position: relative;
+    overflow: hidden;
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid white; */
+}
+
+.pokeball_gray{
+    position: absolute;
+    height: 75%;
+    z-index: -1;
+}
+
+#img_pokeball1{
+    left: -7vw;
+    bottom: -12vh;
+}
+
+#inner_footer_container1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer_icon{
+    height: 10vh;
+}
+
+#footer_title{
+    margin-top: 0%;
+    font-size: 60px;
+}
+
+#footer_container2{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 100%;
+    border: 1px solid white;
+}
+
+#inner_footer_container_top{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    border: 1px solid white;
+}
+
+#inner_footer_container_bottom{
+    height: 15%;
+    width: 100%;
+    /* border: 1px solid white; */
+}
+
+#inner_footer_container2-1{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
+    /* border: 1px solid white; */
+}
+
+.footer_nav_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#fnc_left{  /* footer nav container left*/
+    margin-left: 2vw;
+}
+
+#fnc_right{
+    margin-right: 2vw;
+}
+
+.ul_flexbox{
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+#inner_footer_container2-2{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    border: 1px solid white;
+    padding-left: 60px;
+}
+
+#theme_title{
+    margin-top: 4vh;
+}
+#theme_flexbox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.theme_containers{
+    display: flex;
+    gap: 20px;
+}
+
+.theme_circle{
+    height: 40px;
+    width: 40px;
+    border: 5px solid white;
+    border-radius: 30%;
+}
+
+#red_color{
+    background-color: var(--red_color1);
+}
+
+#blue_color{
+    background-color: var(--blue_color1);
+}
+
+#yellow_color{
+    background-color: var(--yellow_color1);
+}
+
+#purple_color{
+    background-color: var(--purple_color1);
+}
