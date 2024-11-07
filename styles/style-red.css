@@ -1,9 +1,4 @@
 /*Global*/
-/*
-Couleur : 
-Vert =>
-Orange =>
-*/
 @font-face{
     src: url(../fonts/Jersay10.ttf);
     font-family: Jersay10;
@@ -489,6 +484,7 @@ nav li{
     width: 40px;
     border: 5px solid white;
     border-radius: 30%;
+    cursor: pointer;
 }
 
 #red_color{
