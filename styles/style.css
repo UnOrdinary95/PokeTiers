@@ -1,8 +1,6 @@
 /*Global*/
 /*
 Couleur : 
-Rouge => rgb(255,0,0)
-Bleu => rgb(13,133,213)
 Vert =>
 Orange =>
 */
@@ -19,6 +17,20 @@ Orange =>
 @font-face{
     src: url(../fonts/Poppins-Bold.ttf);
     font-family: Poppins;
+}
+
+:root{  /* Variable CSS (Global Scope)*/
+    --red_color1: rgba(255,0,0,1);
+    --red_color07: rgba(255,0,0,0.7);
+
+    --blue_color1: rgba(13,133,213,1);
+    --blue_color07: rgba(13,133,213,0.7);
+
+    --yellow_color1: rgba(221, 185, 24, 1);
+    --yellow_color07: rgba(221, 185, 24, 0.7);
+
+    --purple_color1: rgba(120, 19, 203, 1);
+    --purple_color07: rgba(120, 19, 203, 0.7);
 }
 
 body{
@@ -52,7 +64,7 @@ a{
 }
 
 .text_color{
-    color: rgb(13,133,213);
+    color: var(--red_color1);
 }
 
 .button_shape{
@@ -62,15 +74,15 @@ a{
     padding: 10px 20px;
     cursor: pointer;
     color: white;
-    background-color: rgba(13,133,213,1);
+    background-color: var(--red_color1);
 }
 
 .button_shape:hover{
-    background-color: rgba(13,133,213,0.7);
+    background-color: var(--red_color07);
 }
 
 nav a:hover{
-    color: rgb(13,133,213);
+    color: var(--red_color1);
     text-decoration: underline;
 }
 
@@ -450,8 +462,47 @@ nav li{
 }
 
 #inner_footer_container2-2{
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 50%;
     border: 1px solid white;
+    padding-left: 60px;
 }
 
+#theme_title{
+    margin-top: 4vh;
+}
+#theme_flexbox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.theme_containers{
+    display: flex;
+    gap: 20px;
+}
+
+.theme_circle{
+    height: 40px;
+    width: 40px;
+    border: 5px solid white;
+    border-radius: 30%;
+}
+
+#red_color{
+    background-color: var(--red_color1);
+}
+
+#blue_color{
+    background-color: var(--blue_color1);
+}
+
+#yellow_color{
+    background-color: var(--yellow_color1);
+}
+
+#purple_color{
+    background-color: var(--purple_color1);
+}
