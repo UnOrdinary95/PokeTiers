@@ -441,11 +441,11 @@ nav li{
     justify-content: center;
 }
 
-#fnc_left{  /* footer nav container left*/
+#f_nav_left{  /* footer nav container left*/
     margin-left: 2vw;
 }
 
-#fnc_right{
+#f_nav_right{
     margin-right: 2vw;
 }
 

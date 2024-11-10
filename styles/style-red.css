@@ -85,6 +85,7 @@ nav a:hover{
 
 /*Header*/
 #header_container1{
+    background-color: #060606;
     display: flex;
     justify-content: space-between;
     height: 7vh;
@@ -362,10 +363,11 @@ nav li{
 }
 
 #footer{
+    background-color: #060606;
     display: flex;
     margin-top: 10vh;
     height: 40vh;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     /* flex-wrap: nowrap; */
 }
 
@@ -380,7 +382,6 @@ nav li{
 .pokeball_gray{
     position: absolute;
     height: 75%;
-    z-index: -1;
 }
 
 #img_pokeball1{
@@ -411,14 +412,14 @@ nav li{
     flex-direction: column;
     width: 75%;
     height: 100%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 #inner_footer_container_top{
     height: 85%;
     width: 100%;
     display: flex;
-    border: 1px solid white;
+    /* border: 1px solid rgb(255, 255, 255); */
 }
 
 #inner_footer_container_bottom{
@@ -432,7 +433,7 @@ nav li{
     justify-content: space-between;
     height: 100%;
     width: 50%;
-    /* border: 1px solid white; */
+    /* border: 1px solid rgb(255, 255, 255); */
 }
 
 .footer_nav_container{
@@ -441,11 +442,11 @@ nav li{
     justify-content: center;
 }
 
-#fnc_left{  /* footer nav container left*/
+#f_nav_left{  /* footer nav container left*/
     margin-left: 2vw;
 }
 
-#fnc_right{
+#f_nav_right{
     margin-right: 2vw;
 }
 
@@ -456,13 +457,21 @@ nav li{
     gap: 5vh;
 }
 
+
 #inner_footer_container2-2{
+    position: relative;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
     height: 100%;
     width: 50%;
-    border: 1px solid white;
-    padding-left: 60px;
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+
+#theme{
+    height: 100%;
+    width: 25%;
+    padding-left: 10%;
+    /* border: 1px solid rgb(255, 255, 255); */
 }
 
 #theme_title{
@@ -501,4 +510,15 @@ nav li{
 
 #purple_color{
     background-color: var(--purple_color1);
+}
+
+#img_artist{
+    height: 20vh;
+    margin-top: 5vh;
+    margin-left: -2vw;
+}
+
+#img_pokeball2{
+    right: -7vw;
+    top: -12vh;
 }
