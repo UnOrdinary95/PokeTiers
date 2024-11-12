@@ -89,7 +89,6 @@ nav a:hover{
     display: flex;
     justify-content: space-between;
     height: 7vh;
-    /* border: 2px solid white; */
 }
 
 .inner_header_container1{    /* inner_header_container1 == ihc1*/
@@ -152,7 +151,6 @@ nav li{
 
 #header_container2{
     height: 80vh;
-    /* border: 2px solid white; */
     position: relative; /* Nécessaire pour positionner ::before par rapport à ce conteneur */
     display: flex;
     justify-content: center; /*Centre horizontalement*/
@@ -189,17 +187,15 @@ nav li{
 
 
 
-/*Main => 5 Sections*/
+/*Main => 4 Sections*/
 #three_sections_flexbox{
     display: flex;
-    /* border: 1px solid white; */
 }
 
 #section1{
     position: relative; /*Nécessaire pour pouvoir utiliser position: absolute (On veut se baser sur ça)*/
     height: 100vh;
     width: 40vw;
-    /* border: 1px solid white; */
 }
 
 #section_container1{
@@ -211,7 +207,6 @@ nav li{
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid white; */
 }
 
 #isc1_sprite{   /*isc = inner_section_container1*/
@@ -245,7 +240,6 @@ nav li{
     position: relative;
     height: 50vh;
     width: 60vw;
-    /* border: 1px solid white; */
 }
 
 .section_container2_3{
@@ -257,7 +251,6 @@ nav li{
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid white; */
 }
 
 #isc2_pikachu{ /* inner_section_container2*/
@@ -300,7 +293,6 @@ nav li{
     margin-bottom: 5vh;
     display: flex;
     justify-content: center;
-    /* border: 1px solid white; */
 }
 
 #section_container4{
@@ -309,19 +301,16 @@ nav li{
     background-color: #1c1d1f;
     border-radius: 20px;
     display: flex;
-    /* border: 1px solid white; */
 }
 
 
 #left-inner_section_container4{
     position: relative;
-    /* border: 1px solid white; */
     width: 40%;
 }
 
 #right-inner_section_container4{
     width: 60%;
-    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -362,13 +351,12 @@ nav li{
     padding-bottom: 3vh;
 }
 
+/*Footer*/
 #footer{
-    background-color: #060606;
+    background-color: #090808;
     display: flex;
     margin-top: 10vh;
     height: 40vh;
-    /* border: 1px solid white; */
-    /* flex-wrap: nowrap; */
 }
 
 #footer_container1{
@@ -376,7 +364,6 @@ nav li{
     overflow: hidden;
     width: 25%;
     height: 100%;
-    /* border: 1px solid white; */
 }
 
 .pokeball_gray{
@@ -412,20 +399,17 @@ nav li{
     flex-direction: column;
     width: 75%;
     height: 100%;
-    /* border: 1px solid white; */
 }
 
 #inner_footer_container_top{
     height: 85%;
     width: 100%;
     display: flex;
-    /* border: 1px solid rgb(255, 255, 255); */
 }
 
 #inner_footer_container_bottom{
     height: 15%;
     width: 100%;
-    /* border: 1px solid white; */
 }
 
 #inner_footer_container2-1{
@@ -433,7 +417,6 @@ nav li{
     justify-content: space-between;
     height: 100%;
     width: 50%;
-    /* border: 1px solid rgb(255, 255, 255); */
 }
 
 .footer_nav_container{
@@ -451,7 +434,6 @@ nav li{
 }
 
 .ul_flexbox{
-    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
     gap: 5vh;
@@ -464,14 +446,12 @@ nav li{
     display: flex;
     height: 100%;
     width: 50%;
-    /* border: 1px solid rgb(255, 255, 255); */
 }
 
 #theme{
     height: 100%;
     width: 25%;
     padding-left: 10%;
-    /* border: 1px solid rgb(255, 255, 255); */
 }
 
 #theme_title{
@@ -491,7 +471,7 @@ nav li{
 .theme_circle{
     height: 40px;
     width: 40px;
-    border: 5px solid white;
+    border: 3px solid white;
     border-radius: 30%;
     cursor: pointer;
 }
@@ -522,3 +502,18 @@ nav li{
     right: -7vw;
     top: -12vh;
 }
+
+#liens_utiles{
+    position: absolute;
+    bottom: 10vh;
+    right: 2vw;
+}
+
+#copyright{
+    padding-top: 2.5vh;
+    color: gray;
+    font-size: 12px;
+}
+/* --------------------------------------------------------------*/
+/* --------------------------------------------------------------*/
+/* --------------------------------------------------------------*/
