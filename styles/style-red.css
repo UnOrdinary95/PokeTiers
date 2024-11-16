@@ -81,6 +81,24 @@ nav a:hover{
     text-decoration: underline;
 }
 
+#style_arrow-left{
+    display: inline-block;
+    margin-right: 1vh;
+    border-radius: 30px;
+    padding: 7px 20px;
+    background-color: var(--red_color1);
+}
+
+#style_arrow-left:hover{
+    background-color: var(--red_color07);
+}
+
+.flexbox_column_center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /*Header*/
@@ -190,56 +208,65 @@ nav li{
 /*Main => 4 Sections*/
 #three_sections_flexbox{
     display: flex;
+    height: 100vh;
+    width: 100vw;
+    /* border: 1px solid white; */
 }
 
 #section1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     position: relative; /*Nécessaire pour pouvoir utiliser position: absolute (On veut se baser sur ça)*/
-    height: 100vh;
-    width: 40vw;
+    height: 100%; /*100vh*/
+    width: 40%; /*40vw*/
 }
 
 #section_container1{
-    height: 90vh;
-    width: 32vw;
-    margin-top: 5vh;
-    margin-left: 5vw;    
+    height: 90%; /*90 vh*/
+    width: 85%; /*32 vw*/
     background-color: #1c1d1f;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    margin-right: 2.5vw;
+    /* border: 1px solid blue; */
 }
 
 #isc1_sprite{   /*isc = inner_section_container1*/
+    display: block;
     position: absolute;
-    height: 30vh;
-    width: 10vw;
-    left: 1vw;
+    height: auto;
+    max-width: 25%;
+    left: 0vw;
     bottom: 15vh;
 }
 
 #isc1_screenshot{
-    position: absolute;
     border-radius: 20px;
     border: 3px solid white;
-    height: 35vh;
+    height: 40vh;
     width: 25vw;
-    right: 1vw;
+    margin-top: 2vh;
+    margin-right: -5vw;
 }
 
 #button_play_now{
-    margin-left: 16vw;
-    margin-top: 70%;
+    margin-top: 3vh;
+    margin-right: -5vw;
 }
 
 #right_flexbox{
     display: flex;
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 60%;
     flex-direction: column;
 }
 
 .section2_3{
     position: relative;
-    height: 50vh;
-    width: 60vw;
+    /* border: 1px solid red; */
 }
 
 .section_container2_3{
@@ -251,12 +278,13 @@ nav li{
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    /* border: 1px solid blue; */
 }
 
 #isc2_pikachu{ /* inner_section_container2*/
     position: absolute;
     height: 20vh;
-    left: 1vw;
+    left: -0.5vw;
     bottom: 0vh;
 }
 
@@ -264,8 +292,9 @@ nav li{
     position: absolute;
     border-radius: 20px;
     border: 3px solid white;
-    height: 20vh;
-    right: 1vw;
+    height: auto;
+    max-width: 17%;
+    right: 5vw;
     bottom: 0vh;
 }
 
@@ -277,10 +306,10 @@ nav li{
     position: absolute;
     border-radius: 20px;
     border: 3px solid white;
-    height: 22vh;
-    width: 22vw;
-    bottom: 1vh;
-    right: 1vw;
+    height: auto;
+    max-width: 30%;
+    bottom: 0vh;
+    right: 5vw;
 }
 
 #button_gen{
@@ -289,15 +318,16 @@ nav li{
 }
 
 #section4{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    height: 80vh;
+    width: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #section_container4{
-    height: 70vh;
-    width: 80vw;    
+    height: 95%;
+    width: 80%;    
     background-color: #1c1d1f;
     border-radius: 20px;
     display: flex;
@@ -305,8 +335,9 @@ nav li{
 
 
 #left-inner_section_container4{
-    position: relative;
     width: 40%;
+    display: flex;
+    flex-direction: column;
 }
 
 #right-inner_section_container4{
@@ -316,16 +347,18 @@ nav li{
     flex-wrap: wrap;
 }
 
-#pyramid{
-    height: 30vh;
-    position: absolute;
-    bottom: 3%;
-    left: 1%;
+#pyramid-button{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#button_tiers{
-    margin-left: 20vw;
-    margin-top: 20vh;
+#pyramid{
+    max-width: 50%;
+    height: auto;
+    display: block;
 }
 
 .r-isc4_box{
@@ -368,12 +401,13 @@ nav li{
 
 .pokeball_gray{
     position: absolute;
-    height: 75%;
+    height: auto;
+    max-width: 14vw;
 }
 
 #img_pokeball1{
     left: -7vw;
-    bottom: -12vh;
+    bottom: -11vh;
 }
 
 #inner_footer_container1{
@@ -500,7 +534,7 @@ nav li{
 
 #img_pokeball2{
     right: -7vw;
-    top: -12vh;
+    top: -11vh;
 }
 
 #liens_utiles{
@@ -517,3 +551,57 @@ nav li{
 /* --------------------------------------------------------------*/
 /* --------------------------------------------------------------*/
 /* --------------------------------------------------------------*/
+/*Pas dans index.html*/
+.sticky_header{
+    position: sticky;
+    top:0;
+}
+
+#main-flexbox{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    /* border: 1px solid white; */
+    margin: 0 auto;
+}
+
+#main_div_h1{
+    display: flex;
+    align-items: center;
+}
+
+#main_div_hr{
+    width: 100%;
+}
+
+#section_container{
+    /* border: 1px solid white; */
+    width: 100%;
+    height: auto;
+    background-color: #1c1d1f;
+    border-radius: 20px;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+/* --------------------------------------------------------------*/
+/* --------------------------------------------------------------*/
+/* --------------------------------------------------------------*/
+.h3_format{
+    margin-left: 1.5vw;
+}
+
+.gray{
+    color: gray;
+}
+
+.forms_class{
+    margin-left: 3vw;
+}
+
+.start_checkbox{
+    margin-left: 3vw;
+}
