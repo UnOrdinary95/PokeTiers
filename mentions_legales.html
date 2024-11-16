@@ -6,13 +6,14 @@
     <!--Spécifie l'encodage des caractères utilisé dans la page web-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Garantit que la page s'affiche correctement sur les appareils mobiles-->
-    <title>PokéTiers - OverUsed Rankings</title>
+    <title>PokéTiers - Mentions Légales</title>
     <link rel="stylesheet" href="styles/style-red.css" id="stylesheet">
     <link rel="icon" type="image/png" href="images/pokeball.png">
+    <script src="https://kit.fontawesome.com/755060982a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
+    <header class="sticky_header">
         <div id="header_container1">
             <div class="inner_header_container1" id="ihc1_left">
                 <a href="index.html">
@@ -40,10 +41,62 @@
             </div>
         </div>
     </header>
-    
-    <main>
 
-    </main> 
+    <main id="main-flexbox">
+        <div id="main_div_h1">
+            <a href="index.html" id="button_return">
+                <span id="style_arrow-left">
+                    <i class="fa-solid fa-arrow-left fa-xl"></i>
+                </span>
+            </a>
+            
+            <h1>Mentions Légales</h1>
+        </div>
+
+        <hr id="main_div_hr">
+
+        <section id="section_container">
+            <p class="p_format">Ce site web est un projet étudiant réalisé dans le cadre du BTS SIO. Il n'a aucune vocation commerciale et est exclusivement destiné à des fins pédagogiques.</p>
+            
+            <div>
+                <h2 class="h2_format">I - Identification</h2>
+                <p class="p_format"><b>Nom du projet : </b>Projet étudiant BTS SIO - Site sur le Pokémon compétitif.</p>
+                <p class="p_format"><b>Responsable de la publication : </b>UnOrdinary</p>
+                <p class="p_format"><b>Nature du site : </b>Site éducatif à but non lucratif.</p>
+                <p class="p_format"><b>Contact : </b>Pour toute question, veuillez m'écrire à l'adresse e-mail fournie sur la page de contact.</p>
+            </div>
+            
+            <div>
+                <h2 class="h2_format">II - Hébergement du site</h2>
+                <p class="p_format"><b>Hébergeur : </b>AlwaysData</p>
+                <p class="p_format"><b>Adresse : </b>AlwaysData, 91 rue du Faubourg Saint-Honoré, 75008 Paris, France.</p>
+                <p class="p_format"><b>Site web : </b><a href="https://www.alwaysdata.com/fr/" class="gray">https://www.alwaysdata.com</a></p>
+            </div>
+            
+            <div>
+                <h2 class="h2_format">III - Propriété intellectuelle</h2>
+                <p class="p_format">Les éléments graphiques, textes et autres contenus présents sur ce site sont utilisés à des fins éducatives uniquement. 
+                    Ce site n'est ni affilié ni soutenu par Nintendo, Game Freak, ou The Pokémon Company.</p>
+                <p class="p_format">Les marques, logos, images et contenus relatifs à Pokémon appartiennent exclusivement à leurs détenteurs respectifs.</p>
+            </div>
+            
+            <div>
+                <h2 class="h2_format">IV - Responsabilité</h2>
+                <p class="p_format">L'auteur de ce site décline toute responsabilité quant à l'utilisation des informations fournies.</p>
+                <p class="p_format">Les informations présentées sont correctes au moment de leur publication, 
+                    mais elles peuvent contenir des erreurs ou des omissions</p>
+            </div>
+            
+            <div>
+                <h2 class="h2_format">V - Données personnelles</h2>
+                <p class="p_format">Une donnée personnelle est une information permettant d'identifier directement ou indirectement une personne physique (nom, prénom, adresse mail, adresse IP, etc.)</p>
+                <p class="p_format">Ce site ne collecte aucune donnée personnelle. 
+                    Cependant, certaines préférences utilisateur, comme le choix du thème visuel, 
+                    peuvent être enregistrées localement sur votre appareil pour améliorer votre expérience de navigation. 
+                    Ces données restent entièrement privées et ne sont pas transmises à des tiers.</p>
+            </div>
+        </section>
+    </main>
 
     <footer id="footer">
         <div id="footer_container1">
@@ -109,12 +162,12 @@
                         <h3 id="theme_title">Thème :</h3>
 
                         <div id="theme_flexbox">
-                            <div id="theme_container1" class="theme_containers">
+                            <div class="theme_containers">
                                 <div class="theme_circle" id="red_color"></div>
                                 <div class="theme_circle" id="blue_color"></div>
                             </div>
 
-                            <div id="theme_container2" class="theme_containers">
+                            <div class="theme_containers">
                                 <div class="theme_circle" id="yellow_color"></div>
                                 <div class="theme_circle" id="purple_color"></div>
                             </div>
