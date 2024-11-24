@@ -1,3 +1,48 @@
+<?php
+// Inclure le fichier de connexion à la DB
+include('config/init_db.php');
+
+$db = getDbConnection();
+
+// Requête pour obtenir le nombre de pokemon groupé par tier
+// Tier 4 = les pokemon qui ne sont pas OverUsed donc pas pris en compte dans cette tier list
+$query_counttier = "SELECT tier, count(tier) AS nbr_pkmn_tier FROM pokemon
+WHERE tier < 4
+GROUP BY tier
+ORDER BY tier";
+
+$prepared_query = pg_prepare($db, "query_counttier", $query_counttier);
+$execute_query_counttier = pg_execute($db, "query_counttier", []);
+
+if($execute_query_counttier){
+    $nombre_pkmn_tier = pg_fetch_all($execute_query_counttier);
+}
+else{
+    die("Erreur lors de l'exécution de la requête.");
+}
+
+// Requête pour obtenir le nom, l'image, les deux types, le lien
+// la dimension et la description de chaque pokemon
+// trié par son tier et son classement
+$query_pokemon = "SELECT tier, nom_pokemon_fr, gif, dimension_gif,
+img_type1, img_type2, description, lien
+FROM pokemon
+WHERE tier < 4
+ORDER BY tier, classement";
+
+$prepared_query = pg_prepare($db, "query_pokemon", $query_pokemon);
+$execute_query_pokemon = pg_execute($db, "query_pokemon", []);
+
+if($execute_query_pokemon){
+    $info_pkmn = pg_fetch_all($execute_query_pokemon);
+}
+else{
+    die("Erreur lors de l'exécution de la requête.");
+}
+
+pg_close($db);
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +51,7 @@
     <!--Spécifie l'encodage des caractères utilisé dans la page web-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Garantit que la page s'affiche correctement sur les appareils mobiles-->
-    <title>PokéTiers - Contact</title>
+    <title>PokéTiers - Tier List</title>
     <link rel="stylesheet" href="styles/style-red.css" id="stylesheet">
     <link rel="icon" type="image/png" href="images/pokeball.png">
     <script src="https://kit.fontawesome.com/755060982a.js" crossorigin="anonymous"></script>
@@ -50,61 +95,60 @@
                 </span>
             </a>
             
-            <h1>Contact</h1>
+            <h1>Tier List</h1>
         </div>
 
         <hr id="main_div_hr">
 
-        <section id="section_container" class="box_shadow">
-            <h3 class="h3_format">Vous souhaitez me contacter ? Remplissez le formulaire ci-dessous ou utilisez les informations de contact fournies.</h3>
-            <p class="p_format gray">Ce formulaire est purement illustratif et n'est pas fonctionnel. 
-                Aucune donnée ne sera envoyée ou traitée, car ce site est un projet étudiant sans interactivité.</p>
+        <section id="section_tier_list">
+            <table id="tier_list_styles" class="box_shadow">
+                <?php
+                // 4 tiers donc on aura besoin de 4 itérations
+                $char_tiers = ['S', 'A', 'B', 'C'];
 
-            <form>
-                <label class="forms_class" for="pseudo">Pseudo : </label>
-                <input type="text" placeholder="Pseudo" required>
-                <br><br>
-                
-                <label class="forms_class" for="email">Adresse e-mail : </label>
-                <input type="email" placeholder="Adresse e-mail" required>
-                <br><br>
+                for($i = 0, $index_pkmn = 0; $i < 4; $i++){
+                    
+                    print("<tr>
+                                <th id='tier' rowspan='".($nombre_pkmn_tier[$i]['nbr_pkmn_tier'] * 4 + 1)."'>
+                                    ".$char_tiers[$i]."
+                                </th>
+                            </tr>
+                        ");
+                    
+                    for($j = 0; $j < $nombre_pkmn_tier[$i]['nbr_pkmn_tier']; $j++, $index_pkmn++){
+                        print("
+                            <tr>
+                                <th colspan='2' class='pokemon_name'>
+                                    ".$info_pkmn[$index_pkmn]['nom_pokemon_fr']."
+                                </th>
 
-                <label class="forms_class" for="message">Message : </label>
-                <textarea rows="2" cols="150" placeholder="Votre message ici..." required></textarea>
-                <br><br>
+                                <td rowspan='4' class='td_paddings' id='description_width'>
+                                    ".$info_pkmn[$index_pkmn]['description']."
+                                </td>
+                            <tr>
 
-                <label class="forms_class" for="notes">Sur une échelle de 1 à 10, quelle note attribuez-vous à ma tier list ? </label>
-                <label for="note1"><4</label>
-                <input type="radio" value="inf4" name="notes">
-                <label for="note2">4</label>
-                <input type="radio" value="4" name="notes">
-                <label for="note3">5-6</label>
-                <input type="radio" value="5-6" name="notes">
-                <label for="note4">7-8</label>
-                <input type="radio" value="7-8" name="notes">
-                <label for="note5">9-10</label>
-                <input type="radio" value="9-10" name="notes">
-                <br><br>
+                            <tr>
+                                <th colspan='2' class='pokemon_gif'>
+                                    <a href='".$info_pkmn[$index_pkmn]['lien']."'>
+                                        <img src='".$info_pkmn[$index_pkmn]['gif']."' class='".$info_pkmn[$index_pkmn]['dimension_gif']."'>
+                                    </a>
+                                </th>
+                            </tr>
 
-                <label class="forms_class" for="suggestion">Qu'aimeriez-vous proposer ? </label><br>
-                <input class="forms_class" type="checkbox" name="request" value="Changer la tier list">
-                <label for="tierlist">Proposer des changements sur la tier list</label><br>
-                <input class="forms_class" type="checkbox" name="request" value="Proposer une équipe Pokémon">
-                <label for="equipe">Proposer une équipe Pokémon</label><br>
-                <input class="forms_class" type="checkbox" name="request" value="Autre">
-                <label for="autre">Autre (merci de préciser dans 'message')</label>
-                <br><br>
-
-                <button class="forms_class" type="submit">Envoyer</button>
-                <br><br>
-            </form>
-
-            <h2 class="h2_format">Autres moyens de contact</h2>
-            <ul>
-                <li><strong>E-mail : </strong>unordinaryyasuo@gmail.com</li>
-                <li><strong>GitHub : </strong><a href="https://github.com/UnOrdinary95" class="gray" target="_blank">UnOrdinary95</a></li>
-                <li><strong>Discord : </strong>unordinary.</li>
-            </ul>
+                            <tr>
+                                <td align='center' class='types_paddings'>
+                                    <img src='".$info_pkmn[$index_pkmn]['img_type1']."'>
+                                </td>
+                                
+                                <td align='center' class='types_paddings'>
+                                    <img src='".$info_pkmn[$index_pkmn]['img_type2']."'>
+                                </td>
+                            </tr>
+                        ");
+                    }
+                }
+                ?>    
+            </table>
         </section>
     </main>
 

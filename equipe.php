@@ -90,13 +90,13 @@ pg_close($db);
                 <div>
                     <nav id="header_nav">
                         <ul id="header_ul">
-                            <li id="header_nav_li"><a href="tier_list.html">Tier List</a></li>
-                            <li id="header_nav_li"><a href="equipes.html">Équipes</a></li>
+                            <li id="header_nav_li"><a href="tier_list.php">Tier List</a></li>
+                            <li id="header_nav_li"><a href="equipes.php">Équipes</a></li>
                         </ul>
                     </nav>
                 </div>
 
-                <a href="https://play.pokemonshowdown.com/">
+                <a href="https://play.pokemonshowdown.com/" target="_blank">
                     <button class="button_shape" id="header_button_play">Jouer</button>
                 </a>
             </div>
@@ -115,7 +115,7 @@ pg_close($db);
         </div>
 
         <hr id="main_div_hr">
-
+    
         <section class="section_sample_team1">
             <?php
             for($i = 0, $index = 0; $i < 3; $i++) {
@@ -127,7 +127,7 @@ pg_close($db);
                     $array = json_decode($sets[$index]['moveset']);
 
                     print("
-                    <table class='table_styles'>
+                    <table class='box_shadow'>
                     <tr>
                         <th colspan='2' class='pokemon_name'>" . $pokemon[$index]['nom_pokemon_fr'] . " (".$sets[$index]['nom_pokemon_en'].")</th>  
                         <td rowspan='3' class='td_paddings'>
@@ -143,7 +143,7 @@ pg_close($db);
                         </td>  
                     </tr>
         
-                    <tr rowspan='4'>
+                    <tr>
                         <th colspan='2' class='pokemon_gif'>
                             <a href='".$pokemon[$index]['lien']."'>
                                 <img src='" . $pokemon[$index]['gif'] . "' class='" . $pokemon[$index]['dimension_gif'] . "'>
@@ -167,10 +167,7 @@ pg_close($db);
         ?>
         </section>
         
-
- 
-
-        <section id="section_sample_team2">
+        <section id="section_sample_team2" class="box_shadow">
             <h2 class="h2_format">Importation :</h2>
             
             <textarea readonly rows="10" cols="40" id="copy">
@@ -224,15 +221,15 @@ EVs: ".$sets[$index]['evs']."
                     <div class="footer_nav_container">
                         <nav id="f_nav_left">
                             <ul class="ul_flexbox">
-                                <a href="tier_list.html">
+                                <a href="tier_list.php">
                                     <li>Tier List</li>
                                 </a>
     
-                                <a href="equipes.html">
+                                <a href="equipes.php">
                                     <li>Équipes</li>
                                 </a>
                                 
-                                <a href="https://play.pokemonshowdown.com/">
+                                <a href="https://play.pokemonshowdown.com/" target="_blank">
                                     <li>Jouer</li>
                                 </a>
                             </ul>
@@ -242,15 +239,15 @@ EVs: ".$sets[$index]['evs']."
                     <div class="footer_nav_container">
                         <nav id="f_nav_right">
                             <ul class="ul_flexbox">
-                                <a href="https://www.smogon.com/forums/">
+                                <a href="https://www.smogon.com/forums/" target="_blank">
                                     <li>Forum</li>
                                 </a>
     
-                                <a href="https://calc.pokemonshowdown.com/">
+                                <a href="https://calc.pokemonshowdown.com/" target="_blank">
                                     <li>Calculateur de dégats</li>
                                 </a>
                                 
-                                <a href="https://www.smogon.com/dex/sv/pokemon/">
+                                <a href="https://www.smogon.com/dex/sv/pokemon/" target="_blank">
                                     <li>Pokedex</li>
                                 </a>
                             </ul>
@@ -287,6 +284,10 @@ EVs: ".$sets[$index]['evs']."
                                 
                                 <a href="mentions_legales.html">
                                     <li>Mentions Légales</li>
+                                </a>
+
+                                <a href="https://molard.alwaysdata.net/" target="_blank">
+                                    <li>Site Partenaire</li>
                                 </a>
                             </ul>
                         </nav>

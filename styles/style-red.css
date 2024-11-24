@@ -93,6 +93,10 @@ nav a:hover{
     background-color: var(--red_color07);
 }
 
+.box_shadow{
+    box-shadow: 5px 5px 5px var(--red_color1);
+}
+
 .flexbox_column_center{
     display: flex;
     flex-direction: column;
@@ -205,12 +209,11 @@ nav li{
 
 
 
-/*Main => 4 Sections*/
+/*Main => index.html => 4 Sections*/
 #three_sections_flexbox{
     display: flex;
-    height: 100vh;
-    width: 100vw;
-    /* border: 1px solid white; */
+    height: 110vh;
+    width: auto;
 }
 
 #section1{
@@ -218,19 +221,18 @@ nav li{
     justify-content: flex-end;
     align-items: center;
     position: relative; /*Nécessaire pour pouvoir utiliser position: absolute (On veut se baser sur ça)*/
-    height: 100%; /*100vh*/
-    width: 40%; /*40vw*/
+    height: 100%;
+    width: 40%;
 }
 
 #section_container1{
-    height: 90%; /*90 vh*/
-    width: 85%; /*32 vw*/
+    height: 90%;
+    width: 85%;
     background-color: #1c1d1f;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     margin-right: 2.5vw;
-    /* border: 1px solid blue; */
 }
 
 #isc1_sprite{   /*isc = inner_section_container1*/
@@ -258,33 +260,35 @@ nav li{
 
 #right_flexbox{
     display: flex;
-    /* border: 1px solid red; */
     height: 100%;
     width: 60%;
     flex-direction: column;
 }
 
 .section2_3{
-    position: relative;
-    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    width: auto;
 }
 
 .section_container2_3{
-    height: 40vh;
-    width: 50vw;
+    position: relative;
+    height: 80%;
+    width: 85%;
     margin-top: 5vh;
     margin-left: 5vw;
     background-color: #1c1d1f;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid blue; */
 }
 
 #isc2_pikachu{ /* inner_section_container2*/
     position: absolute;
     height: 20vh;
-    left: -0.5vw;
+    left: -5vw;
     bottom: 0vh;
 }
 
@@ -293,8 +297,8 @@ nav li{
     border-radius: 20px;
     border: 3px solid white;
     height: auto;
-    max-width: 17%;
-    right: 5vw;
+    max-width: 25%;
+    right: 0vw;
     bottom: 0vh;
 }
 
@@ -307,9 +311,9 @@ nav li{
     border-radius: 20px;
     border: 3px solid white;
     height: auto;
-    max-width: 30%;
+    max-width: 35%;
     bottom: 0vh;
-    right: 5vw;
+    right: 0vw;
 }
 
 #button_gen{
@@ -318,7 +322,8 @@ nav li{
 }
 
 #section4{
-    height: 80vh;
+    padding-top: 5vh;
+    height: 90vh;
     width: auto;
     display: flex;
     justify-content: center;
@@ -388,7 +393,7 @@ nav li{
 #footer{
     background-color: #090808;
     display: flex;
-    margin-top: 10vh;
+    padding-top: 10vh;
     height: 40vh;
 }
 
@@ -574,10 +579,7 @@ nav li{
     width: 100%;
 }
 
-
-
 #section_container{
-    /* border: 1px solid white; */
     width: 100%;
     height: auto;
     background-color: #1c1d1f;
@@ -637,22 +639,11 @@ nav li{
     width: auto;
 }
 
-.table_styles{
-    background-color: #1c1c1c;
-    box-shadow: 5px 5px 5px var(--red_color1);
-    border-radius: 20px;
-    /* border: 1px solid silver; */
-}
-
 .pokemon_name{
-    border-right: 1px solid silver;
-    border-bottom: 1px solid silver;
     width: 10vw;
 }
 
 .pokemon_gif{
-    border-right: 1px solid silver;
-    border-bottom: 1px solid silver;
     width: 20vw;
     height: 30vh;
 }
@@ -660,7 +651,6 @@ nav li{
 .types_paddings{
     max-width: 50vw;
     padding-top: 0.5vw;
-    border-right: 1px solid silver;
 }
 
 .td_paddings{
@@ -671,7 +661,6 @@ nav li{
 .table_flexbox_row{
     width: 100%;
     display: flex;
-    /* border: 5px solid blue; */
     justify-content: space-between;
 }
 
@@ -703,7 +692,6 @@ nav li{
 /* --------------------------------------------------------------*/
 
 #equipes_container{
-    /* border: 1px solid white; */
     width: 50%;
     height: auto;
     background-color: #1c1d1f;
@@ -729,4 +717,21 @@ nav li{
 #img_flutter_mane{
     height: 40vh;
     width: 25vw;
+}
+/* --------------------------------------------------------------*/
+/* --------------------------------------------------------------*/
+/* --------------------------------------------------------------*/
+table, th, td {
+    border: 1px solid silver;
+    border-collapse: collapse;  /* Pour éviter la double bordure*/
+    background-color: #1c1d1f;
+}
+
+#tier_list_styles{
+    margin-top: 3vh;
+}
+
+#description_width{
+    width: 40%;
+    border: 8;
 }

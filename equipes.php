@@ -67,13 +67,13 @@ pg_close($db);
                 <div>
                     <nav id="header_nav">
                         <ul id="header_ul">
-                            <li id="header_nav_li"><a href="tier_list.html">Tier List</a></li>
-                            <li id="header_nav_li"><a href="equipes.html">Équipes</a></li>
+                            <li id="header_nav_li"><a href="tier_list.php">Tier List</a></li>
+                            <li id="header_nav_li"><a href="equipes.php">Équipes</a></li>
                         </ul>
                     </nav>
                 </div>
 
-                <a href="https://play.pokemonshowdown.com/">
+                <a href="https://play.pokemonshowdown.com/" target="_blank">
                     <button class="button_shape" id="header_button_play">Jouer</button>
                 </a>
             </div>
@@ -94,7 +94,7 @@ pg_close($db);
         <hr id="main_div_hr">
 
         <div class="flexbox_row">
-            <section id="equipes_container">
+            <section id="equipes_container" class="box_shadow">
                 <div>
                     <p class="p_format">Bienvenue dans le fil des équipes typiques, où vous trouverez quelques équipes solides pour en apprendre plus sur le métagame OverUsed. 
                         Pour rendre l'équipe importable, il suffit de cliquer sur les mini-sprites !</p>
@@ -146,15 +146,15 @@ pg_close($db);
                     <div class="footer_nav_container">
                         <nav id="f_nav_left">
                             <ul class="ul_flexbox">
-                                <a href="tier_list.html">
+                                <a href="tier_list.php">
                                     <li>Tier List</li>
                                 </a>
     
-                                <a href="equipes.html">
+                                <a href="equipes.php">
                                     <li>Équipes</li>
                                 </a>
                                 
-                                <a href="https://play.pokemonshowdown.com/">
+                                <a href="https://play.pokemonshowdown.com/" target="_blank">
                                     <li>Jouer</li>
                                 </a>
                             </ul>
@@ -164,15 +164,15 @@ pg_close($db);
                     <div class="footer_nav_container">
                         <nav id="f_nav_right">
                             <ul class="ul_flexbox">
-                                <a href="https://www.smogon.com/forums/">
+                                <a href="https://www.smogon.com/forums/" target="_blank">
                                     <li>Forum</li>
                                 </a>
     
-                                <a href="https://calc.pokemonshowdown.com/">
+                                <a href="https://calc.pokemonshowdown.com/" target="_blank">
                                     <li>Calculateur de dégats</li>
                                 </a>
                                 
-                                <a href="https://www.smogon.com/dex/sv/pokemon/">
+                                <a href="https://www.smogon.com/dex/sv/pokemon/" target="_blank">
                                     <li>Pokedex</li>
                                 </a>
                             </ul>
@@ -209,6 +209,10 @@ pg_close($db);
                                 
                                 <a href="mentions_legales.html">
                                     <li>Mentions Légales</li>
+                                </a>
+
+                                <a href="https://molard.alwaysdata.net/" target="_blank">
+                                    <li>Site Partenaire</li>
                                 </a>
                             </ul>
                         </nav>
