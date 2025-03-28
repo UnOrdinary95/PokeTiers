@@ -49,7 +49,7 @@ CREATE TABLE public.pokemon_set (
 	type_tera varchar(20) NOT NULL,
 	evs varchar(255) NOT NULL,
 	nature varchar(20) NOT NULL,
-	moveset _varchar NOT NULL,
+	moveset varchar(40)[] NOT NULL,
 	objet varchar(20) NOT NULL,
 	id_pokemon int4 NOT NULL,
 	CONSTRAINT attaques_4 CHECK ((array_length(moveset, 4) <= 4)),
